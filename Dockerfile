@@ -1,6 +1,6 @@
 FROM node:16-alpine AS builder
 
-RUN apk add python3 make
+RUN apk add python2 make gcc g++ libc-dev
 COPY . /usr/src/app
 ENV NODE_ENV="production"
 RUN cd /usr/src/app && npm install --production
