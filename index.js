@@ -43,3 +43,6 @@ app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 })
 
+process.on('SIGTERM', () => {
+  app.close()
+})
